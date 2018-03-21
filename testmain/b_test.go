@@ -2,6 +2,6 @@ package testmain
 
 import "testing"
 
-func TestA(t *testing.T) {
-	t.Log("TestA")
+func TestB(t *testing.T) {
+	t.Log("TestB")
 }
