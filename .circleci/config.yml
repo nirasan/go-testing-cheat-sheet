@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:
+    environment:
+      - GOPATH: /home/circleci/go
+    docker:
+      - image: circleci/golang:1.9
+    working_directory: /home/circleci/go/src/github.com/nirasan/go-testing-cheat-sheet
+    steps:
+      - checkout
+      - run: go get github.com/golang/dep/...
+      - run: ${GOPATH}/bin/dep ensure
+      - run: go test -v ./...
