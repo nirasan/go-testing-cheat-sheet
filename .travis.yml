@@ -1,3 +1,7 @@
 language: go
 go:
   - "1.9"
+install:
+  - dep ensure
+script:
+  - go test -v ./...
